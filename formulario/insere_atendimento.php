@@ -2,7 +2,6 @@
 require_once("conexao.php");
 session_start();
 date_default_timezone_set('American/Sao_paulo');
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Capturar os valores do formulário
     $data_inicio = $_POST['data_inicio'];

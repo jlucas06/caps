@@ -26,6 +26,7 @@
             <h6 class="collapse-header">Cadastros</h6>
             <a class="collapse-item" href="../novo_paciente.php">Novo Paciente</a>
             <a class="collapse-item" href="../novo_atendimento.php">Novo Atendimento</a>
+            <a class="collapse-item" href="iniciar_atendimento.php">Iniciar Atendimento</a>
         </div>
     </div>
 </li>

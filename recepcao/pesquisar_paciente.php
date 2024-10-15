@@ -43,7 +43,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <div class="form-group mb-2">
-                    <form action="#" method="POST"> 
+                    <form action="insere_atendimento.php" method="POST"> 
                         <h3 class = "" style = "font-size:40px"> Cadastrar Novo tendimento </h3>      
                         <div class="row">
                             <div class="col-4">
