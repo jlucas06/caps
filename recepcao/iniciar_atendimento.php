@@ -26,10 +26,19 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                     <div class="form-group mb-2">
-                    <form action="pesquisar_atendimento.php" method="POST">
-                        <span>pesquisar</span> 
-                        <input type="text" class="form-control" name="cpf">
-                        <button class="btn btn-primary">Enviar</button>
+                    <form action="pesquisar_paciente.php" method="POST"> 
+                        <h3 class = "" style = "font-size:40px"> Cadastrar Novo tendimento </h3>      
+                        <div class="row">
+                            
+                            <div class="col-3">
+                            <label style = "font-size:20px"> Digite o CPF ou CNS do paciente : </label>
+                                <input type="text" class="form-control" name="cpf">
+                                <button class="btn btn-primary" style="margin-top:10px; float:right">Buscar</button>
+                            </div>
+
+                        </div>
+
+                    
                     </form>
                     </div>
                 </div>

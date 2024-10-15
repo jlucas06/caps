@@ -21,32 +21,69 @@
 
                 <?php 
                 include "navbar.php";
+                include "../conexao.php";
+                $cpf_cns = $_POST["cpf"];
+                $sql = "SELECT * FROM usuario where cpf_cns = '$cpf_cns'";
+                $resultado = $conn->prepare($sql);
+                $nome = NULL;
+                $data_nascimento = NULL;
+                
+                if($resultado->execute()){
+                    $dados=$resultado->fetchAll();
+                    foreach ($dados as $k) {
+                        $nome = $k['nome_paciente'];
+                        $data_nascimento = $k['nascimento'];
+                    }
+                        
+                }
+                $date = DateTime::createFromFormat('Y-m-d', $data_nascimento);
+                $data_formatada = $date->format('d/m/Y');
                 ?>
 
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-                    <form action="" method="get">
-                        <span>pesquisar</span> 
-                        <input type="text" name="cpf">
-                        <button class="btn btn-primary">Enviar</button>
-                    </form>
-                    <select name="" id="">
-                        <?php
-                        include "../conexao.php";
-                        $sql = "SELECT * FROM tb_login WHERE tipo_usuario = 4";
-                        $resultado=$conn->prepare($sql);
-                        if ($resultado->execute()) {
-                                $dados=$resultado->fetchAll();
-                                foreach ($dados as $k) {
-                                $cpf = $k['cpf'];
-                                ?>
-                                <option value="<?= $cpf?>"> <?=$k['nome']?> </option>
+                    <div class="form-group mb-2">
+                    <form action="#" method="POST"> 
+                        <h3 class = "" style = "font-size:40px"> Cadastrar Novo tendimento </h3>      
+                        <div class="row">
+                            <div class="col-4">
+                            <label style = "font-size:20px"> Digite o CPF ou CNS do paciente : </label>
+                                <input type="text" class="form-control" name="cpf" value = "<?= $cpf_cns ?>" disabled>
+                            </div>
+                       
+                        </div>
+                        <div class="row" style = "margin-top:30px">
+                            <div class="col">
+                            <input type = "text" class = "form-control" name = "nome" value = "<?= $nome ?>" disabled>
+                            </div>
+                            <div class="col">
+                            <input type = "text" class = "form-control" name = "data" value = "<?= $data_formatada ?>" disabled>
+                            </div>
+                            <div class="col">
+                            <select name="profissional" class = "form-control">
                                 <?php
-                            }
-                        }
+                                
+                                $sql = "SELECT * FROM tb_login WHERE tipo_usuario = 4";
+                                $resultado=$conn->prepare($sql);
+                                if ($resultado->execute()) {
+                                        $dados=$resultado->fetchAll();
+                                        foreach ($dados as $k) {
+                                        $cpf = $k['cpf'];
+                                        ?>
+                                        <option value="<?= $cpf?>"> <?=$k['nome']?> </option>
+                                        <?php
+                                    }
+                                }
 
-                        ?>
-                    </select>
+                                ?>
+                            </select>
+
+                            </div>
+
+                        </div>
+                    <input type = "submit" value = "Iniciar Atendimento" class = "btn btn-primary" style = "margin-top:10px;float:right">    
+                    </form>
+                    </div>
                 </div>
             </div>
             <!-- Footer -->
@@ -90,3 +127,6 @@
 </body>
 
 </html>
+<?php 
+if(isset($_POST['']))
+?>
