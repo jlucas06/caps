@@ -71,7 +71,7 @@
 
 <li class="nav-item">
     <a class="nav-link" href="../logout.php">
-        <i class="fas fa-fw fa-table"></i>
+        <i class="fas fa-fw fa-sign-out-alt"></i>
         <span>SAIR</span></a>
 </li>
 
