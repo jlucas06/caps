@@ -40,8 +40,8 @@
         data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Busca:</h6>
-            <a class="collapse-item" href="#">Buscar Paciente</a>
-            <a class="collapse-item" href="#">Buscar Atendimento</a>
+            <a class="collapse-item" href="busca_paciente.php">Buscar Paciente</a>
+            <a class="collapse-item" href="busca_atendimento.php">Buscar Atendimento</a>
         </div>
     </div>
 </li>

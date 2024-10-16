@@ -24,7 +24,7 @@
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Cadastros</h6>
-            <a class="collapse-item" href="../novo_atendimento.php">Novo Atendimento</a>
+            <a class="collapse-item" href="novo_atendimento.php">Novo Atendimento</a>
         </div>
     </div>
 </li>
@@ -39,28 +39,11 @@
         data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Busca:</h6>
-            <a class="collapse-item" href="#">Buscar Paciente</a>
             <a class="collapse-item" href="#">Buscar Atendimento</a>
         </div>
     </div>
 </li>
 
-<li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-        aria-expanded="true" aria-controls="collapseUtilities">
-        <i class="fas fa-fw fa-wrench"></i>
-        <span>RELATÓRIOS</span>
-    </a>
-    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-        data-parent="#accordionSidebar">
-        <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Relatorio:</h6>
-            <a class="collapse-item" href="#">Relatorio Geral</a>
- 
-
-        </div>
-    </div>
-</li>
 
 <hr class="sidebar-divider">
 
