@@ -48,29 +48,31 @@
                         <div class="row">
                             <div class="col-4">
                             <label style = "font-size:20px"> Digite o CPF ou CNS do paciente : </label>
-                                <input type="text" class="form-control" name="cpf" value = "<?= $cpf_cns ?>" disabled>
+                                <input type="text" class="form-control" name="cpf1" value = "<?= $cpf_cns ?>" disabled>
+                                <input type = "hidden" name = "cpf" value = "<?= $cpf_cns ?>">
                             </div>
                        
                         </div>
                         <div class="row" style = "margin-top:30px">
                             <div class="col">
-                            <input type = "text" class = "form-control" name = "nome" value = "<?= $nome ?>" disabled>
+                            <input type = "text" class = "form-control" name = "nome1" value = "<?= $nome ?>" disabled>
+                            <input type = "hidden" name = "nome" value = "<?= $nome ?>">
                             </div>
                             <div class="col">
                             <input type = "text" class = "form-control" name = "data" value = "<?= $data_formatada ?>" disabled>
+                            
                             </div>
                             <div class="col">
                             <select name="profissional" class = "form-control">
                                 <?php
                                 
-                                $sql = "SELECT * FROM tb_login WHERE tipo_usuario = 4";
-                                $resultado=$conn->prepare($sql);
-                                if ($resultado->execute()) {
-                                        $dados=$resultado->fetchAll();
-                                        foreach ($dados as $k) {
-                                        $cpf = $k['cpf'];
+                                $sql2 = "SELECT * FROM tb_login WHERE tipo_usuario = 4";
+                                $resultado2=$conn->prepare($sql2);
+                                if ($resultado2->execute()) {
+                                        $dados2=$resultado2->fetchAll();
+                                        foreach ($dados2 as $j) {
                                         ?>
-                                        <option value="<?= $cpf?>"> <?=$k['nome']?> </option>
+                                        <option value="<?= $j['cpf'] ?>"> <?=$j['nome']?> </option>
                                         <?php
                                     }
                                 }
@@ -127,6 +129,3 @@
 </body>
 
 </html>
-<?php 
-if(isset($_POST['']))
-?>
