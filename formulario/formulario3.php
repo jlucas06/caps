@@ -153,10 +153,11 @@ include "conexao.php";
         <form action="../formulario/insere_acoes.php" method="post">
              <!-- Seção Código de Ação e Descrição -->
              <div class="mb-3">
-             <label for="descriptionSpan" class="input-group-text">Código de Ação Descrição</label>
-            <input type="text" id="descriptionSpan" name="cod_acao" class="form-control text-uppercase" placeholder="Código de Ação">
+            
 
             <div class="input-group mb-3">
+            <label for="descriptionSpan" class="input-group-text">Código de Ação Descrição</label>
+            <input type="text" id="descriptionSpan" name="cod_acao" class="form-control text-uppercase" placeholder="Código de Ação">
                 <span class="input-group-text">Descrição</span>
                 <select id="descricao_acao" name="descricao_acao" class="form-select" onchange="atualizarCodigo()">
                     <option value="0301080020">ACOLHIMENTO NOTURNO DE PACIENTE EM CENTRO DE ATENÇÃO PSICOSSOCIAL</option>
