@@ -40,8 +40,8 @@ if ($result->execute()) {
                                     <th>número do Paciente</th>
                                     <th>Nome do Paciente</th>
                                     <th>CPF/CNS</th>
-                                    <th>nascimento</th>
-                                    <th>Nacionalidade</th>
+                                    <th>Sexo</th>
+                                    <th>Nascimento</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -123,13 +123,7 @@ if ($result->execute()) {
                 </div>
             </div>
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; SESA - Secretaria de Saude 2024</span>
-                    </div>
-                </div>
-            </footer>
+            
             <!-- End of Footer -->
 
         </div>

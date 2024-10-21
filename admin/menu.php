@@ -23,7 +23,7 @@
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Cadastros</h6>
+            <h6 class="collapse-header">Cadastros:</h6>
             <a class="collapse-item" href="novo_paciente.php">Novo Paciente</a>
             <a class="collapse-item" href="novo_atendimento.php">Novo Atendimento</a>
         </div>
@@ -31,12 +31,12 @@
 </li>
 
 <li class="nav-item">
-    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-        aria-expanded="true" aria-controls="collapseUtilities">
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilitie"
+        aria-expanded="true" aria-controls="collapseUtilitie">
         <i class="fas fa-fw fa-wrench"></i>
         <span>BUSCAS</span>
     </a>
-    <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+    <div id="collapseUtilitie" class="collapse" aria-labelledby="headingUtilities"
         data-parent="#accordionSidebar">
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Busca:</h6>
@@ -57,8 +57,6 @@
         <div class="bg-white py-2 collapse-inner rounded">
             <h6 class="collapse-header">Relatorio:</h6>
             <a class="collapse-item" href="#">Relatorio Geral</a>
- 
-
         </div>
     </div>
 </li>
