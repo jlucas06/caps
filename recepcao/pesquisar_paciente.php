@@ -18,75 +18,9 @@
 
             <!-- Main Content -->
             <div id="content">
-
-                <?php 
-                include "navbar.php";
-                include "../conexao.php";
-                $cpf_cns = $_POST["cpf"];
-                $sql = "SELECT * FROM usuario where cpf_cns = '$cpf_cns'";
-                $resultado = $conn->prepare($sql);
-                $nome = NULL;
-                $data_nascimento = NULL;
-                
-                if($resultado->execute()){
-                    $dados=$resultado->fetchAll();
-                    foreach ($dados as $k) {
-                        $nome = $k['nome_paciente'];
-                        $data_nascimento = $k['nascimento'];
-                    }
-                        
-                }
-                $date = DateTime::createFromFormat('Y-m-d', $data_nascimento);
-                $data_formatada = $date->format('d/m/Y');
+                <?php
+                    include "../formulario/pesquisar_paciente.php";
                 ?>
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-                    <div class="form-group mb-2">
-                    <form action="insere_atendimento.php" method="POST"> 
-                        <h3 class = "" style = "font-size:40px"> Cadastrar Novo tendimento </h3>      
-                        <div class="row">
-                            <div class="col-4">
-                            <label style = "font-size:20px"> Digite o CPF ou CNS do paciente : </label>
-                                <input type="text" class="form-control" name="cpf1" value = "<?= $cpf_cns ?>" disabled>
-                                <input type = "hidden" name = "cpf" value = "<?= $cpf_cns ?>">
-                            </div>
-                       
-                        </div>
-                        <div class="row" style = "margin-top:30px">
-                            <div class="col">
-                            <input type = "text" class = "form-control" name = "nome1" value = "<?= $nome ?>" disabled>
-                            <input type = "hidden" name = "nome" value = "<?= $nome ?>">
-                            </div>
-                            <div class="col">
-                            <input type = "text" class = "form-control" name = "data" value = "<?= $data_formatada ?>" disabled>
-                            
-                            </div>
-                            <div class="col">
-                            <select name="profissional" class = "form-control">
-                                <?php
-                                
-                                $sql2 = "SELECT * FROM tb_login WHERE tipo_usuario = 4";
-                                $resultado2=$conn->prepare($sql2);
-                                if ($resultado2->execute()) {
-                                        $dados2=$resultado2->fetchAll();
-                                        foreach ($dados2 as $j) {
-                                        ?>
-                                        <option value="<?= $j['cpf'] ?>"> <?=$j['nome']?> </option>
-                                        <?php
-                                    }
-                                }
-
-                                ?>
-                            </select>
-
-                            </div>
-
-                        </div>
-                    <input type = "submit" value = "Iniciar Atendimento" class = "btn btn-primary" style = "margin-top:10px;float:right">    
-                    </form>
-                    </div>
-                </div>
             </div>
             <!-- Footer -->
             <footer class="sticky-footer bg-white">

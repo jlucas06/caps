@@ -37,20 +37,20 @@ if ($result->execute()) {
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>número do Paciente</th>
-                                    <th>Nome do Paciente</th>
-                                    <th>CPF/CNS</th>
-                                    <th>Sexo</th>
-                                    <th>Nascimento</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php if ($dados): ?>
-                                    <td><?= htmlspecialchars($dados['nprontuario']) ?></td>
-                                    <td><?= htmlspecialchars($dados['nome_paciente']) ?></td>
-                                    <td><?= htmlspecialchars($dados['cpf_cns']) ?></td>
-                                    <td><?= htmlspecialchars($dados['sexo']) ?></td>
-                                    <td><?= htmlspecialchars($dados['nascimento']) ?></td>    
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>    
                                     <?php else: ?>
                                     <p>Nenhum dado encontrado para o ID especificado.</p>
                                     <?php endif; ?>                               
@@ -59,20 +59,20 @@ if ($result->execute()) {
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Nacionalidade</th>
-                                    <th>Descrição</th>
-                                    <th>Raça</th>
-                                    <th>Etnia</th>
-                                    <th>Nome da mãe</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php if ($dados): ?>
-                                    <td><?= htmlspecialchars($dados['nacionalidade']) ?></td>
-                                    <td><?= htmlspecialchars($dados['descricao']) ?></td>
-                                    <td><?= htmlspecialchars($dados['raca']) ?></td>
-                                    <td><?= htmlspecialchars($dados['etinia']) ?></td>
-                                    <td><?= htmlspecialchars($dados['nome_mae']) ?></td>    
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>    
                                     <?php else: ?>
                                     <p>Nenhum dado encontrado para o ID especificado.</p>
                                     <?php endif; ?>                               
@@ -81,20 +81,20 @@ if ($result->execute()) {
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Nome do Resposável</th>
-                                    <th>Município de Residência</th>
-                                    <th>CEP</th>
-                                    <th>Endereço</th>
-                                    <th>Complemento</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php if ($dados): ?>
-                                    <td><?= htmlspecialchars($dados['nome_responsavel']) ?></td>
-                                    <td><?= htmlspecialchars($dados['municipio_residencia']) ?></td>
-                                    <td><?= htmlspecialchars($dados['cep']) ?></td>
-                                    <td><?= htmlspecialchars($dados['endereco']) ?></td>
-                                    <td><?= htmlspecialchars($dados['complemento']) ?></td>    
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>    
                                     <?php else: ?>
                                     <p>Nenhum dado encontrado para o ID especificado.</p>
                                     <?php endif; ?>                               
@@ -103,16 +103,16 @@ if ($result->execute()) {
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Telefone Celular</th>
-                                    <th>Telefone de Contato</th>
-                                    <th>Situação de Rua</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php if ($dados): ?>
-                                    <td><?= htmlspecialchars($dados['telefone_celular']) ?></td>
-                                    <td><?= htmlspecialchars($dados['telefone_contato']) ?></td>
-                                    <td><?= htmlspecialchars($dados['situacao_rua']) ?></td> 
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td>
+                                    <td><?= htmlspecialchars($dados['']) ?></td> 
                                     <?php else: ?>
                                     <p>Nenhum dado encontrado para o ID especificado.</p>
                                     <?php endif; ?>                               

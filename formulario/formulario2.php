@@ -112,7 +112,7 @@ include "conexao.php";
                         $sql2 = "SELECT * FROM dados_atendimento WHERE status = 1 AND id_usuarios = $id ";
                         $resultado2=$conn->prepare($sql2);
                         $resultado2->execute();
-                        if ($resultado2->rowCount() != 0) {
+                        if ($resultado2->rowCount() == 0) {
                             ?>
                             <option value="<?php echo $k['id_usuario'];?>" ><?php echo $k['nome_paciente'];?> </option>
                             <?php

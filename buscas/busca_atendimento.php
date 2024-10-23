@@ -18,10 +18,10 @@
                         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>Nome do Paciente</th>
-                                    <th>CPF/CNS</th>
-                                    <th>Sexo</th>
-                                    <th>Nome da Mãe</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
                                     <th>Ação</th>
                                 </tr>
                             </thead>
@@ -30,18 +30,18 @@
                                 include "../conexao.php";
                                 session_start();
                                 $cpf = $_SESSION['medico'];
-                                $sql ="SELECT * FROM tb_atendimento WHERE cpf_medico = $cpf";
+                                $sql ="SELECT * FROM tb_atendimento WHERE cpf_medico = $cpf AND estado_atendimento != 3";
                                 $result = $conn->prepare($sql);
                                 if($result->execute()){
                                     $dados = $result->fetchAll();
                                     foreach ($dados as $k) {
                                         ?>
                                         <tr>
-                                            <td><?= $k['nome_paciente'] ?></td>
-                                            <td><?= $k['cpf_cns'] ?></td>
-                                            <td><?= $k['sexo'] ?></td>
-                                            <td><?= $k['nome_mae'] ?></td>
-                                            <td> <a href = "listar_paciente.php?id_usuario=<?= $k['id_usuario'] ?>"> VER MAIS</a>  </td>
+                                            <td><?= $k[''] ?></td>
+                                            <td><?= $k[''] ?></td>
+                                            <td><?= $k[''] ?></td>
+                                            <td><?= $k[''] ?></td>
+                                            <td> <a href = "listar_atendimento.php?id_atendimentos=<?= $k['id_atendimentos'] ?>"> VER MAIS</a>  </td>
                                         </tr>
 
                                         <?php
