@@ -1,3 +1,11 @@
+<?php 
+        session_start();
+        if (!isset($_SESSION['medico'])) {
+            header("Location: ../index.php");
+            exit();
+        }
+    ?>
+<!DOCTYPE ht
 <!DOCTYPE html>
 <html lang="en">
 

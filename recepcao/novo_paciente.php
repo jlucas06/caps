@@ -1,3 +1,12 @@
+<?php 
+        session_start();
+        include "head.php";
+        if (!isset($_SESSION['recepcao'])) {
+            header("Location: ../index.php");
+            exit();
+        }
+    ?>
+<!DOCTYPE ht
 <!DOCTYPE html>
 <html lang="en">
 
